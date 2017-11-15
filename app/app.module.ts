@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { APP_ROUTING } from './app.routes';
 
@@ -12,6 +13,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 // Servicios
 import { SpotifyService } from './services/spotify.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { SpotifyService } from './services/spotify.service';
   imports: [
     BrowserModule,
     APP_ROUTING,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [
     SpotifyService
