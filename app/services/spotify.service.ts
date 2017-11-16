@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 export class SpotifyService {
 
   artistas:any[] = [];
-  token:string = "Bearer BQCOxs2fHPMCsEbHW7g3VD9XOrDBgUJ50lWQEDDtSU_FiX9KQ502-V0_1szk4x30gQ-jCnPqvIcb9E7sXR0f2w";
+  token:string = "Bearer BQB6D6dbjljB1VlEDAxYKKy5jeFoKqcDCClTKwL8bduRnptZOyWqc6r_8wnzexLDxJPPievBop3uteUg1KTDYjTeATVa7cCk375kIbjTXZeVnz32ti8Zkm1b23yMKi2drwGH_irTDK2T";
   urlBusqueda:string = "https://api.spotify.com/v1/search";
   urlArtista:string = "https://api.spotify.com/v1/artist";
 
@@ -22,7 +22,7 @@ export class SpotifyService {
     return this.http.get(url, {headers} )
                 .map( res =>{
                   this.artistas = res.json().artists.items;
-                  console.log(this.artistas);
+                  // console.log(this.artistas);
                 });
   }
 
